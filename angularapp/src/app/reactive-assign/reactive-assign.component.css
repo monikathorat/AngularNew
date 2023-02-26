@@ -1,0 +1,71 @@
+.form-group{
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 300px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 290px;
+}
+button{
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+    margin-top: 30px;    
+    color: white;
+    box-shadow: 5px 4px 10px darkgray;
+}
+.container{
+    height: 100px;
+    margin-top: 30px;
+    width: 950px; 
+    
+}
+.form-control{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 7px rgb(207, 164, 247);
+    width: 450px;    
+    border-radius: 10px;
+    margin-bottom: 5px;    
+}
+
+
+
+
+form{
+    background-color: honeydew;
+    
+}
+
+.date{
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px rgb(196, 148, 241);
+
+}
+
+label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+/* 
+#id{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(111, 211, 208);
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 10px;
+} */
+

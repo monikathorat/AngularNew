@@ -1,0 +1,15 @@
+
+<div class="container">
+    <h2>Passing data from Child to Parent</h2>
+
+    <button class="btn btn-primary" (click) ="fromChildToParent(this.showdetails=!this.showdetails)">Click Me</button>
+    <div [hidden] = "!showdetails" id="first">
+        Name: {{objEmp.name}}
+        <br>
+        City: {{objEmp.city}}
+        <br>
+        Contact: {{objEmp.contact}}
+    
+    </div>
+
+</div>

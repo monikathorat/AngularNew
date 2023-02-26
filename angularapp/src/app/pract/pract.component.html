@@ -1,0 +1,37 @@
+<p>pract works!</p>
+<!-- {{name}} -->
+<br>
+<button (click)="getName('monicaa')">Click me</button>
+<br>
+<input type="text" (keyup)="getName('hello')">
+<br>
+<input type="text" (keydown)="getName('hey')">
+<br>
+<h2 (mouseover)="getName('learning angular')">angular</h2>
+
+<input type="text" value="{{2+2}}">  <br>
+
+<input type="text" [value]="name"> <br>
+
+<input type="text" [(ngModel)]="twoWay">
+<p>{{twoWay}}</p> <br>
+<h3>{{twoWay}}</h3> <br>
+
+<h4>passing data from parent to child : {{prop}}</h4>
+<button (click)="sendDataToParent()">Click Here</button>
+
+<h4 *ngFor="let detail of data">{{detail.id}}--{{detail.nickName}}</h4>
+
+<h4 *ngIf="show; else elseBlock" >ngIf directive</h4>
+<ng-template #elseBlock>
+    <h4>ngIf else condition</h4>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <h4 *ngSwitchCase="'red'">red</h4>
+    <h4 *ngSwitchCase="'blue'">red</h4>
+    <h4 *ngSwitchCase="'yello'">red</h4>
+    <h4 *ngSwitchCase="'green'">red</h4>
+    <h4 *ngSwitchDefault>default</h4>
+</div>
+

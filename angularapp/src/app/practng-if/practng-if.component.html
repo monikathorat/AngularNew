@@ -1,0 +1,14 @@
+
+<div class="container">
+    <h3>Practice On *ngFor & *ngIf Directive</h3>
+</div>
+  <div  style="margin-left: 15px;">
+    <div *ngFor="let c of cities">
+        <div class="name">{{c.name}}</div>
+        <div class="img">
+          <img *ngIf="c.imgUrl; else noImage" width="500px" [src]="c.imgUrl" alt="City Image">
+          <ng-template #noImage> <p>Image Not Available</p> </ng-template>
+        </div>
+        <div class="content">{{c.content}}</div>
+    </div>
+</div>

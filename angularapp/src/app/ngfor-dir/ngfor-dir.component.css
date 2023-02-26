@@ -1,0 +1,23 @@
+
+#container{
+    margin-top: 20px;
+    height:120px;
+    width: 500px;
+    text-align: center;
+    margin-left: 500px;
+    padding-top: 20px;
+}
+#leb{
+    background-color:darkorchid;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: white;
+}
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#first,#second{
+   color: black;
+   margin-top: 10px;
+   background-color: aliceblue;
+}

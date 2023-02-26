@@ -1,0 +1,13 @@
+<p>test1 works!</p>
+<button (click)="onButtonClick()">Click Me</button>
+<p>Count is: {{count}}</p>
+
+<input type="text" (keyup)="onKeyUp($event)">
+
+<h1>Two way databinding</h1>
+
+<input type="text" [(ngModel)]="firstName">
+
+<button class="btn btn-primary" (click)="sendToParent()">Click me from Test2</button>
+
+  {{firstName}}

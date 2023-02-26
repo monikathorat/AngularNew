@@ -1,0 +1,38 @@
+ol{
+   list-style: none;
+}
+li{
+    line-height: 40px;
+}
+#second{
+    margin-top: 15px;
+    height: 40px;
+    width: 800px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    margin-left: 250px ;
+    box-shadow: 10px 8px 10px gray;
+    font-weight: bold;
+}
+#btn{
+    margin-top: 30px;
+    box-shadow: 10px 8px 10px darkgray;
+    color:white;
+    background-color: darkblue;
+    border-radius: 10px;
+    }
+.container{
+    text-align: center;
+}
+.para{
+    font-size: large;
+    font-weight: bolder;
+    text-shadow: 5px 6px 8px gray;
+    text-align: center;
+    margin-left: 250px;
+    margin-top: 10px;
+    background-color:ghostwhite;
+    width: 800px;
+    height: 40px;
+    border-radius: 10px;
+}
