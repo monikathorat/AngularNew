@@ -1,0 +1,110 @@
+
+<mat-card class="login-page">
+    <mat-card-title>
+        Template Registration Form
+    </mat-card-title>
+    <mat-card-content>
+        <form class="login-form" #loginform="ngForm">            
+            <mat-form-field>
+                <input matInput type="text" name="firstname" 
+                ngModel
+                required firstname
+                minlength="5" maxlength="10"
+                #firstname="ngModel"  
+                placeholder="Enter First Name">
+                <mat-error *ngIf="firstname.errors?.required">Firstname is mandatory</mat-error>
+                <mat-error *ngIf="firstname.errors?.minlength">Firstname must have {{firstname.errors?.minlength.requiredLength}} characters but you provided only {{firstname.errors?.minlength.actualLength}} characters</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="text" name="lastname" 
+                ngModel
+                required lastname
+                maxlength="10"
+                #lastname="ngModel" 
+                placeholder="Enter Last Name">
+                <mat-error *ngIf="lastname.errors?.required">Lastname is mandatory</mat-error>
+                <mat-error *ngIf="lastname.errors?.maxlength"></mat-error>
+            </mat-form-field>
+    
+
+            <div class="data" ngModelGroup="name" #name="ngModelGroup">
+            <mat-form-field>
+                <input matInput type="number" name="age" 
+                ngModel               
+                required age                   
+                #age="ngModel"
+                pattern="(?:1[7-9]|20)"
+                placeholder="Enter Age">
+                <mat-error *ngIf="age.errors?.pattern">Age should be between 17 to 20</mat-error>
+                <mat-error *ngIf="age.errors?.min">Age should not be less than 17</mat-error>
+                <mat-error *ngIf="age.errors?.max">Age should not be greater than 20</mat-error>                                   
+            </mat-form-field>
+
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Male</mat-radio-button>
+                    <mat-radio-button value="2">Female</mat-radio-button>
+                  </mat-radio-group>                          
+                </div>
+
+            <mat-form-field>
+                <input matInput type="email" name="email" 
+                ngModel
+                required email
+                pattern="[a-z0-9._%+-]+@gmail.com"
+                #email="ngModel" 
+                placeholder="Enter Email">
+                <mat-error *ngIf="email.errors?.required">Lastname is mandatory</mat-error>
+                <mat-error *ngIf="email.errors?.pattern">Please enter valid domain email</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="tel" name="phone" 
+                ngModel
+                required phone
+                minlength="10"
+                pattern = "^((\\+91-?)|0)?[0-9]{10}$"
+                #phone="ngModel" 
+                placeholder="Enter Phone Number">
+            <mat-error *ngIf="phone.errors?.required">Mobile number is mandatory</mat-error>
+            <mat-error *ngIf="phone.errors?.pattern">Only 10 digit numbers allowed</mat-error>
+            </mat-form-field> 
+            
+            <select class="form-control" name="city" [ngModel]="defaultcity">
+                <option *ngFor="let city of cities" value="{{city}}">{{city}}</option>
+            </select>
+           
+            <!-- <div ngModelGroup="passwords" #passwords="ngModelGroup"> -->
+            <mat-form-field>
+                <input matInput type="password" name="password" 
+                ngModel
+                required password
+                pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,12}$"
+                #password="ngModel" 
+                placeholder="Enter Password">
+                <!-- <mat-error *ngIf="password.errors?.required">Password is mandatory</mat-error> -->
+                <mat-error *ngIf="password.errors?.pattern">Please enter atleast 8 characters with number,symbol, small and capital letter</mat-error>
+            </mat-form-field> 
+
+            <mat-form-field>
+                <input matInput type="password" name="confirmpassword" 
+                ngModel
+                required confirmpassword
+                #confirmpassword="ngModel" 
+                placeholder="Confirm Password"
+                pattern="{{password.value}}">
+                <mat-error *ngIf="confirmpassword.errors?.pattern">Password don't match</mat-error> 
+                <!-- <mat-error *ngIf="confirmpassword.errors?.password!=confirmpassword"> mismatch</mat-error>                                  -->
+            </mat-form-field>
+            <!-- <mat-error *ngIf="confirmpassword.errors?.password!=confirmpassword"> mismatch</mat-error> -->
+            <!-- <div *ngIf="passwords.errors?.passwordCheck && password!=confirmpassword" class="alert alert-danger">
+                Passwords do not match.
+            </div> -->        
+             
+            <div class="d-grid">
+                <button mat-raised-button color="primary" (click)="login(loginForm)">Submit</button> 
+            </div>
+
+        </form>
+    </mat-card-content>
+  </mat-card>

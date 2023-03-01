@@ -1,0 +1,158 @@
+<div class="container">
+    <mat-card class="pic">
+        <img mat-card-image src="https://st2.depositphotos.com/2703645/9718/v/950/depositphotos_97186102-stock-illustration-female-cartoon-avatar-icon.jpg" height="250px" width="250px">
+        <div class="row justify-content-center mt-2">
+            <div>            
+              <p>{{ myReactiveForm.get('fullname').value}}</p>
+              <p>{{ myReactiveForm.get('bio').value}}</p>          
+            </div>
+        </div>
+    </mat-card>
+<mat-card class="user-details">
+    <mat-card-title>User Details</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+            <mat-form-field>
+                <input matInput type="text" name="fullname" 
+                formControlName="fullname" 
+                placeholder="Full Name">
+                <!-- <mat-error *ngIf="fullname.errors?.required">Full name is mandatory</mat-error> -->
+                <mat-error *ngIf="!myReactiveForm.get('fullname').valid &&
+            myReactiveForm.get('fullname').touched">
+              Full name is required
+            </mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput type="date" name="date" 
+                formControlName="date" 
+                placeholder="your birthday">
+                <!-- <mat-error *ngIf="fullname.errors?.required">Full name is mandatory</mat-error> -->
+                <mat-error *ngIf="!myReactiveForm.get('date').valid &&
+            myReactiveForm.get('date').touched">
+              Date of Birth required
+            </mat-error>
+            </mat-form-field><br>
+            <div class="from-control">
+                <mat-form-field>
+                  <!-- <mat-lable>Gender</mat-lable> -->
+                  <mat-label>Gender</mat-label>
+                  <mat-select formControlName="gender">
+                    <mat-option value="gen1">Female</mat-option>
+                    <mat-option value="gen2">Male</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="!myReactiveForm.get('gender').valid &&
+            myReactiveForm.get('gender').touched">
+              Gender is required
+            </mat-error>
+                </mat-form-field>
+              </div><br>
+      
+              <span class="selCountry">
+                <mat-form-field>
+                  <!-- <input matInput ngModel name="City"> -->
+                  <mat-label>Country</mat-label>
+                  <mat-select formControlName="country">
+                    <mat-option value="one">India</mat-option>
+                    <mat-option value="two">Australia</mat-option>
+                    <mat-option value="two">Africa</mat-option>
+                  </mat-select>
+                  
+                </mat-form-field>
+            </span><br>
+     
+              
+            <mat-form-field>
+                <input matInput type="tel" name="phone" 
+                formControlName="phone"
+                pattern = "^((\\+91-?)|0)?[0-9]{10}$" 
+                placeholder="phone">
+                <!-- <mat-error *ngIf="fullname.errors?.required">Full name is mandatory</mat-error> -->
+                <mat-error *ngIf="!myReactiveForm.get('phone').valid &&
+            myReactiveForm.get('phone').touched">
+            </mat-error>
+            <mat-error *ngIf="!myReactiveForm.get('phone').pattern">
+                provide valid number
+            </mat-error>
+            
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput type="textarea" name="bio" 
+                formControlName="bio" 
+                maxlength="256"
+                placeholder="bio">
+                <!-- <mat-error *ngIf="fullname.errors?.required">Full name is mandatory</mat-error> -->
+                <mat-error *ngIf="!myReactiveForm.get('bio').valid &&
+            myReactiveForm.get('bio').touched">
+              can't be more than 256 characters long
+            </mat-error>
+            
+            </mat-form-field>            
+        </form>
+    </mat-card-content>
+</mat-card>
+<mat-card class="account-details">
+    <mat-card-title>Account Details</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+            <mat-form-field>
+                <input matInput type="text" name="username" 
+                formControlName="username"
+                minlength="5"
+                maxlength="25"
+                pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,25}$" 
+                placeholder="User Name">
+                <!-- <mat-error *ngIf="fullname.errors?.required">Full name is mandatory</mat-error> -->
+                <mat-error *ngIf="!myReactiveForm.get('username').valid &&
+            myReactiveForm.get('username').touched">
+            
+            </mat-error>
+            <mat-error *ngIf="!myReactiveForm.get('username').pattern">usrname conatain min 5 characters max 25 characters only numbers n letters</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput type="email" name="email" 
+                formControlName="email" 
+                pattern="[a-z0-9._%+-]+@gmail.com"
+                placeholder="email">
+                <!-- <mat-error *ngIf="fullname.errors?.required">Full name is mandatory</mat-error> -->
+                <mat-error *ngIf="!myReactiveForm.get('email').valid &&
+            myReactiveForm.get('email').touched">
+              
+            </mat-error>
+            <mat-error *ngIf="!myReactiveForm.get('email').pattern">provide valid email</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput type="password" name="password" 
+                formControlName="password"
+                minlength="5"
+                pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,12}$"
+                placeholder="password">
+                <!-- <mat-error *ngIf="fullname.errors?.required">Full name is mandatory</mat-error> -->
+                <mat-error *ngIf="!myReactiveForm.get('password').valid &&
+            myReactiveForm.get('password').touched">
+            <mat-error *ngIf="!myReactiveForm.get('password').pattern">Please enter atleast 5 characters with number,symbol, small and capital letter</mat-error>
+              
+            </mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput type="password" name="confirmpassword" 
+                formControlName="confirmpassword"
+                placeholder="confirm password">
+                <!-- <mat-error *ngIf="fullname.errors?.required">Full name is mandatory</mat-error> -->
+                <mat-error *ngIf="!myReactiveForm.get('confirmpassword').valid &&
+            myReactiveForm.get('confirmpassword').touched"></mat-error>
+            <mat-error *ngIf="!myReactiveForm.get('confirmpassword').password!=confirmpassword">password mismatched</mat-error>
+              
+            
+            </mat-form-field><br>
+            <mat-checkbox [aria-label]="isSubscribedToEmailsMessage">I accept terms and conditions</mat-checkbox>        
+
+            <div>
+                <button mat-raised-button color="primary">Submit</button> 
+            </div>
+     
+                      
+        </form>
+    </mat-card-content>
+</mat-card>
+</div>
+  
