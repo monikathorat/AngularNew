@@ -31,6 +31,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFromAssignComponent } from './reactive-from-assign/reactive-from-assign.component';
 import { RegistrationTemplateFormComponent } from './registration-template-form/registration-template-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -69,7 +70,8 @@ import { RegistrationTemplateFormComponent } from './registration-template-form/
     MatCheckboxModule,
     MatStepperModule,
     MatProgressBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

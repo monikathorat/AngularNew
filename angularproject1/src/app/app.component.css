@@ -1,3 +1,16 @@
-.example-card {
+/* .example-card {
     max-width: 400px;
-  }
+  } */
+
+table{
+  height: 450px;
+  width: 950px;
+  margin-left: 300px;
+}
+h3{
+  background-color: black;
+  color: white;
+  width: 1035px;
+  margin-left: 300px;
+
+}

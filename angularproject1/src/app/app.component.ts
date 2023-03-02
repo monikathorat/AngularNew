@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DemoService } from './service/demo.service';
+import { MyserviceService } from './service/myservice.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularproject1';
+  products={};
+  userData:any=[];
+  constructor(private myservice:MyserviceService,private demoService:DemoService){
+
+  }
+  ngOnInit(): void {
+    this.products = this.myservice.products;
+
+    // this.demoService.getUsers().subscribe(res => {
+    //   console.log('user api results', res);
+    // }, err => {
+    //   console.log(err);
+    // })
+    this.demoService.getUsers().subscribe(res=>{
+      console.log(res);      
+      this.userData=res;
+    })
+  }
 }
