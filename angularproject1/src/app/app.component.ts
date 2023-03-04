@@ -10,21 +10,18 @@ import { MyserviceService } from './service/myservice.service';
 export class AppComponent {
   title = 'angularproject1';
   products={};
-  userData:any=[];
+  
   constructor(private myservice:MyserviceService,private demoService:DemoService){
 
   }
   ngOnInit(): void {
     this.products = this.myservice.products;
 
-    // this.demoService.getUsers().subscribe(res => {
-    //   console.log('user api results', res);
-    // }, err => {
-    //   console.log(err);
-    // })
-    this.demoService.getUsers().subscribe(res=>{
-      console.log(res);      
-      this.userData=res;
+    this.demoService.getUsers().subscribe(res => {
+      console.log('user api results', res);
+    }, err => {
+      console.log(err);
     })
+    
   }
 }

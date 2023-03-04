@@ -32,6 +32,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFromAssignComponent } from './reactive-from-assign/reactive-from-assign.component';
 import { RegistrationTemplateFormComponent } from './registration-template-form/registration-template-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PipeexampleComponent } from './pipeexample/pipeexample.component';
+import { CustomPipe } from './custom.pipe';
+import { SearchPipe } from './search.pipe';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { UserserviceComponent } from './userservice/userservice.component';
 
 
 
@@ -40,7 +45,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     ReactiveformComponent,
     ReactiveFromAssignComponent,
-    RegistrationTemplateFormComponent
+    RegistrationTemplateFormComponent,
+    PipeexampleComponent,
+    CustomPipe,
+    SearchPipe,
+    ProductFilterComponent,
+    UserserviceComponent
   ],
   imports: [
     BrowserModule,

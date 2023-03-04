@@ -38,37 +38,14 @@
 <!-- <app-reactiveform></app-reactiveform> -->
 <!-- <app-registration-template-form></app-registration-template-form> -->
 
-<ng-container *ngFor="let product of products">
+<!-- <ng-container *ngFor="let product of products">
   Product Name : <strong class="text-success">{{product.name}}</strong>
   Product Id : <strong class="text-success">{{product.id}}</strong>  
-  </ng-container>
+  </ng-container>-->
 
- <h3>User Data</h3>
- <table class="table table-success table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Username</th>
-      <th>Company</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Website</th>
-      <th>Address</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of userData">
-      <td>{{user.id}}</td>
-      <td>{{user.name}}</td>
-      <td>{{user.username}}</td>
-      <td>{{user.company.name}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.phone}}</td>
-      <td>{{user.website}}</td>
-      <td>{{user.address.suite}},{{user.address.street}},{{user.address.city}}-{{user.address.zipcode}}</td>
-    </tr>
-  </tbody>  
-</table>
+
+<app-userservice></app-userservice>
+<!-- <app-pipeexample></app-pipeexample> -->
+<!-- <app-product-filter></app-product-filter> -->
 
 <router-outlet></router-outlet>
