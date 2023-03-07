@@ -37,6 +37,15 @@ import { CustomPipe } from './custom.pipe';
 import { SearchPipe } from './search.pipe';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
 import { UserserviceComponent } from './userservice/userservice.component';
+import { Component1Component } from './component1/component1.component';
+import { Component2Component } from './component2/component2.component';
+import { Component3Component } from './component3/component3.component';
+import { Component4Component } from './component4/component4.component';
+import { Cmp1Component } from './cmp1/cmp1.component';
+import { Cmp2Component } from './cmp2/cmp2.component';
+
+
+
 
 
 
@@ -50,7 +59,15 @@ import { UserserviceComponent } from './userservice/userservice.component';
     CustomPipe,
     SearchPipe,
     ProductFilterComponent,
-    UserserviceComponent
+    UserserviceComponent,
+    Component1Component,
+    Component2Component,
+    Component3Component,
+    Component4Component,
+    Cmp1Component,
+    Cmp2Component,
+   
+   
   ],
   imports: [
     BrowserModule,
