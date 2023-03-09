@@ -58,6 +58,9 @@ import { PaintingsComponent } from './homesupplies/paintings/paintings.component
 import { LightingsComponent } from './homesupplies/lightings/lightings.component';
 import { DecorComponent } from './homesupplies/decor/decor.component';
 import { DemopostComponent } from './demopost/demopost.component';
+import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { UserComponent } from './user/user.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 
@@ -96,6 +99,9 @@ import { DemopostComponent } from './demopost/demopost.component';
     LightingsComponent,
     DecorComponent,
     DemopostComponent,
+    DemopostdetailsComponent,
+    UserComponent,
+    UserdetailsComponent,
    
    
   ],
