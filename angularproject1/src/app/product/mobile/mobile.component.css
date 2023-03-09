@@ -1,0 +1,8 @@
+.card{
+    display: inline-block;
+    width: 700px;
+    height: 650px;
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 10px;
+}

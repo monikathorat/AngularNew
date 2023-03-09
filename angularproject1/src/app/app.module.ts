@@ -43,6 +43,21 @@ import { Component3Component } from './component3/component3.component';
 import { Component4Component } from './component4/component4.component';
 import { Cmp1Component } from './cmp1/cmp1.component';
 import { Cmp2Component } from './cmp2/cmp2.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductComponent } from './product/product.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { WatchComponent } from './product/watch/watch.component';
+import { MobileComponent } from './product/mobile/mobile.component';
+import { CameraComponent } from './product/camera/camera.component';
+import { HomesuppliesComponent } from './homesupplies/homesupplies.component';
+import { FurnitureComponent } from './homesupplies/furniture/furniture.component';
+import { PaintingsComponent } from './homesupplies/paintings/paintings.component';
+import { LightingsComponent } from './homesupplies/lightings/lightings.component';
+import { DecorComponent } from './homesupplies/decor/decor.component';
+import { DemopostComponent } from './demopost/demopost.component';
 
 
 
@@ -66,6 +81,21 @@ import { Cmp2Component } from './cmp2/cmp2.component';
     Component4Component,
     Cmp1Component,
     Cmp2Component,
+    ContactusComponent,
+    AboutusComponent,
+    HomeComponent,
+    PagenotfoundComponent,
+    ProductComponent,
+    LaptopComponent,
+    WatchComponent,
+    MobileComponent,
+    CameraComponent,
+    HomesuppliesComponent,
+    FurnitureComponent,
+    PaintingsComponent,
+    LightingsComponent,
+    DecorComponent,
+    DemopostComponent,
    
    
   ],
