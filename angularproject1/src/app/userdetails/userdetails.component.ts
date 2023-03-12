@@ -18,8 +18,7 @@ export class UserdetailsComponent implements OnInit {
 
     this.postService.getUserById(id).subscribe( res => {
       console.log('get post by ID', res);
-      this.arr1=res;  
-        
+      this.arr1=res;        
     })
 
 }

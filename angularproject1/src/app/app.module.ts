@@ -47,11 +47,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ProductComponent } from './product/product.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { WatchComponent } from './product/watch/watch.component';
-import { MobileComponent } from './product/mobile/mobile.component';
-import { CameraComponent } from './product/camera/camera.component';
+
 import { HomesuppliesComponent } from './homesupplies/homesupplies.component';
 import { FurnitureComponent } from './homesupplies/furniture/furniture.component';
 import { PaintingsComponent } from './homesupplies/paintings/paintings.component';
@@ -61,6 +57,9 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 import { UserComponent } from './user/user.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { ProductModule } from './product/product.module';
+import { OrdersModule } from './orders/orders.module';
+import { FashionModule } from './fashion/fashion.module';
 
 
 
@@ -88,11 +87,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     AboutusComponent,
     HomeComponent,
     PagenotfoundComponent,
-    ProductComponent,
-    LaptopComponent,
-    WatchComponent,
-    MobileComponent,
-    CameraComponent,
+   
     HomesuppliesComponent,
     FurnitureComponent,
     PaintingsComponent,
@@ -102,6 +97,8 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     DemopostdetailsComponent,
     UserComponent,
     UserdetailsComponent,
+  
+
    
    
   ],
@@ -134,7 +131,12 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     MatStepperModule,
     MatProgressBarModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, 
+    ProductModule,
+    OrdersModule,
+    FashionModule,
+
+    
 
   ],
   providers: [],

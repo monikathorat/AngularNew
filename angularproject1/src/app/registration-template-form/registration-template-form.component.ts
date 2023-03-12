@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MyserviceService } from '../service/myservice.service';
 
 @Component({
@@ -19,7 +20,7 @@ export class RegistrationTemplateFormComponent implements OnInit {
 
    
 
-  constructor(private objService: MyserviceService ) { }
+  constructor(private objService: MyserviceService,private route:Router ) { }
 
   ngOnInit() {
     
@@ -27,6 +28,7 @@ export class RegistrationTemplateFormComponent implements OnInit {
   }
   
   login(form: NgForm) {
+    this.route.navigate(['/userdetails']);
     console.log('Form Successfully Submitted');
 console.log(form);
   }

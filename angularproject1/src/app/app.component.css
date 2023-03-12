@@ -3,12 +3,12 @@
   } */
   .content{
     display: inline-block;
-    margin-left: 400px;
+    margin-left: 350px;
     text-align: center;
     margin-top: 70px;
     background-color:floralwhite;
     color: black;
     font-weight: bolder;
-    width: 900px; 
+    width: 1000px; 
     margin-right: 150px;   
   }

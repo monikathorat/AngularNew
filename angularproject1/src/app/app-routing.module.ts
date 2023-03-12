@@ -4,18 +4,22 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { FashioncategoryComponent } from './fashion/fashioncategory/fashioncategory.component';
+import { FashiondetailsComponent } from './fashion/fashiondetails/fashiondetails.component';
 import { HomeComponent } from './home/home.component';
 import { DecorComponent } from './homesupplies/decor/decor.component';
 import { FurnitureComponent } from './homesupplies/furniture/furniture.component';
 import { HomesuppliesComponent } from './homesupplies/homesupplies.component';
 import { LightingsComponent } from './homesupplies/lightings/lightings.component';
 import { PaintingsComponent } from './homesupplies/paintings/paintings.component';
+import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './product/camera/camera.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
 import { MobileComponent } from './product/mobile/mobile.component';
 import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
+import { RegistrationTemplateFormComponent } from './registration-template-form/registration-template-form.component';
 import { UserComponent } from './user/user.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
@@ -26,8 +30,7 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent }, // http://localhost:4200/aboutus
   { path: 'contactus', component: ContactusComponent },
   { path: 'product', component:ProductComponent , 
-children:[
-  
+children:[  
   {path:'laptop', component:LaptopComponent},
   {path:'mobile', component:MobileComponent},
   {path:'camera', component:CameraComponent},
@@ -52,8 +55,13 @@ children:[
 {path:'post',component:DemopostComponent},
 {path:'postdetails/:id',component:DemopostdetailsComponent},
 {path:'user',component:UserComponent},
-{path:'userdetails/:id',component:UserdetailsComponent},
-  { path: '**', component: PagenotfoundComponent }
+{path:'userdetails',component:UserdetailsComponent},
+// {path:'userdetails/:id',component:UserdetailsComponent},
+{ path: 'login', component: RegistrationTemplateFormComponent},
+{path:'order', component:OrderlistComponent},  
+{ path: 'fashion', component: FashioncategoryComponent },
+{ path: 'fashiondetails/:id', component: FashiondetailsComponent },  
+{ path: '**', component: PagenotfoundComponent}
 ];
 
 @NgModule({

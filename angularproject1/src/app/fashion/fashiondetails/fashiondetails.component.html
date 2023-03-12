@@ -1,0 +1,40 @@
+
+<div class="container"> 
+  <h6><u>Item Details</u></h6>   
+    <div *ngIf="product">
+      <div class="Card"h-100>
+        <h5><strong>{{ product.name }}</strong></h5><br>
+      <img [src]="product.imageUrl" alt="{{ product.name }}" width="300" height="300"><br><br>
+      <p>{{ product.description }}</p>
+      <p><strong>Price: ${{ product.price }}</strong></p>
+      <a routerLink="/fashion"><<<Back</a>
+    </div>
+    <div *ngIf="!product">
+      <p>No fashion item found with ID {{ itemId }}</p>
+    </div>
+      </div>    
+</div> 
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-5 mb-5"  style="max-width: 15rem;" *ngFor="let product of products">
+      <div class="card h-100">
+        <a routerLink="/fashion-details/{{ product.id }}">
+          <img [src]="product.imageUrl" alt="{{ product.name }}" class="card-img-top" style="height: 250px;">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text">Price: ${{ product.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+

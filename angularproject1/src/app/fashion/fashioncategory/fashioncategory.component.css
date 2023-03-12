@@ -1,0 +1,15 @@
+.container{
+    margin-top: 50px;
+   
+    height: 450px;  
+    background-color: darksalmon;
+    width:1200px
+}
+.card{
+    border: 3px solid rgb(255, 162, 0);
+    margin-top: 30px;
+}
+h3{
+    color: honeydew;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

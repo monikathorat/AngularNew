@@ -13,10 +13,10 @@ export class PostService {
   // DI 
   constructor(private http: HttpClient) { }
 
-  getPost(): Observable<any> {
+  getPost(): Observable<any>{
   return this.http.get<Post>(this.url);
   }
-  getPostById(id: number) {
+  getPostById(id: number){
    return this.http.get(this.url+ '/'+ id);
   }
 

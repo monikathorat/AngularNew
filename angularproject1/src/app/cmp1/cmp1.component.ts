@@ -32,8 +32,7 @@ export class Cmp1Component implements OnInit {
     console.log(econtact.value);
     
     this._utilityService.name.next(ename.value);
-    this._utilityService.contact.next(econtact.value);
-    
+    this._utilityService.contact.next(econtact.value);    
   } 
 }
 
