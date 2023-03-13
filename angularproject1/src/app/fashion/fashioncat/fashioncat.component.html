@@ -1,0 +1,23 @@
+<h3><marquee  direction="right">Categories to Buy</marquee></h3>
+
+<div class="btn-group" role="group" aria-label="Filter by category">
+  <b  (click)="filterByCategory('Watches')">Watches</b>
+  <b  (click)="filterByCategory('Handbags')">Handbags</b>
+  <b   (click)="filterByCategory('Sunglasses')">Sunglasses</b>
+</div>
+<hr>
+<div class="row">
+  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+    <div class="card h-100">
+      <img class="card-img-top" [src]="product.imageUrl" [alt]="product.name">
+      <div class="card-body">
+        <h4 class="card-title">{{ product.name }}</h4>
+        <h5>₹{{ product.price }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+      </div>
+      <div class="d-grid">
+        <a [routerLink]="['/detailfashion', product.id]" class="btn btn-dark">Show details</a>
+      </div>
+    </div>
+  </div>
+</div>

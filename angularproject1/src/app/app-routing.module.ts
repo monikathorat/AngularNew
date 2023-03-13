@@ -4,6 +4,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { DetailfashionComponent } from './fashion/detailfashion/detailfashion.component';
+import { FashioncatComponent } from './fashion/fashioncat/fashioncat.component';
 import { FashioncategoryComponent } from './fashion/fashioncategory/fashioncategory.component';
 import { FashiondetailsComponent } from './fashion/fashiondetails/fashiondetails.component';
 import { HomeComponent } from './home/home.component';
@@ -59,8 +61,8 @@ children:[
 // {path:'userdetails/:id',component:UserdetailsComponent},
 { path: 'login', component: RegistrationTemplateFormComponent},
 {path:'order', component:OrderlistComponent},  
-{ path: 'fashion', component: FashioncategoryComponent },
-{ path: 'fashiondetails/:id', component: FashiondetailsComponent },  
+{ path: 'fashionn', component: FashioncatComponent },
+{ path: 'detailfashion/:id', component: DetailfashionComponent },  
 { path: '**', component: PagenotfoundComponent}
 ];
 

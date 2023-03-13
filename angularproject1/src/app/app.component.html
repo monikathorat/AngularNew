@@ -1,5 +1,4 @@
 
-<div >
 
 <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
@@ -82,6 +81,7 @@
       <ul class="nav nav-tabs">
         <li style="margin-left: 90px;" class="nav-item"><a routerLinkActive="active" routerLink="/home" class="nav-link">Home</a></li>
         <li class="nav-item"><a routerLinkActive="active" routerLink="/aboutus" class="nav-link">AboutUs</a></li>
+     
         <li class="nav-item"><a routerLinkActive="active" routerLink="/contactus" class="nav-link">ContactUs</a></li>
         <li class="nav-item"><a routerLinkActive="active" routerLink="/product" class="nav-link">Product</a></li>
         <li class="nav-item"><a routerLinkActive="active" routerLink="/homesupplies" class="nav-link">Home Supplies</a></li>
@@ -89,7 +89,9 @@
         <li class="nav-item"><a routerLinkActive="active" routerLink="/user" class="nav-link">User</a></li>
         <li class="nav-item"><a routerLinkActive="active" routerLink="/login" class="nav-link">Login</a></li>
         <li class="nav-item"><a routerLinkActive="active" routerLink="/order" class="nav-link">Order</a></li>
-        <li class="nav-item"><a routerLinkActive="active" routerLink="/fashion" class="nav-link">Fashion</a></li>
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="/fashionn" class="nav-link">fashion</a>
+        </li>
 
       </ul>
     </nav>
@@ -98,9 +100,8 @@
 
  
 
-
-
-
+<div class="container">
+  <div >
+    <router-outlet></router-outlet>
+  </div>
 </div>
-
-<router-outlet></router-outlet>
