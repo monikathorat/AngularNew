@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
@@ -62,7 +62,9 @@ children:[
 { path: 'login', component: RegistrationTemplateFormComponent},
 {path:'order', component:OrderlistComponent},  
 { path: 'fashionn', component: FashioncatComponent },
-{ path: 'detailfashion/:id', component: DetailfashionComponent },  
+{ path: 'detailfashion/:id', component: DetailfashionComponent }, 
+{ path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
+  { path: 'admin', loadChildren: './admin/admin.module#AdminModule'}, 
 { path: '**', component: PagenotfoundComponent}
 ];
 

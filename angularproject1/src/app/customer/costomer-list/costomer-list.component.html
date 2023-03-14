@@ -1,0 +1,82 @@
+
+        <div><h5>News Data</h5>
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>
+                            UUID
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Publisher
+                        </th>
+                        <th>
+                            Link
+                        </th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let news of news">
+                        <td>{{news.uuid}}</td>
+                        <td>{{news.title}}</td>
+                        <td>{{news.publisher}}</td>
+                        <td>{{news.link}}</td>                                
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+        <div><h5>Quotes Data</h5>
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>
+                            Exchange
+                        </th>
+                        <th>
+                            Shortname
+                        </th>
+                        <th>
+                            Industry
+                        </th>
+                        <th>
+                            Symbol
+                        </th>
+                        <th>
+                            isYahooFinance
+                        </th>  
+                        <th>
+                           Sector
+                        </th>  
+                        <th>
+                            QuoteType
+                         </th>                       
+                        <th>
+                            Score
+                         </th>                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let quote of quotes">
+                        <td>{{quote.exchange}}</td>
+                        <td>{{quote.shortname}}</td>
+                        <td>{{quote.industry}}</td>
+                        <td>{{quote.symbol}}</td> 
+                        <td>{{quote.isYahooFinance}}</td> 
+                        <td>{{quote.sector}}</td>
+                        <td>{{quote.quoteType}}</td>
+                        <td>{{quote.score}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
