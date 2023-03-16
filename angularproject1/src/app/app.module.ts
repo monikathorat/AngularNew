@@ -60,6 +60,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ProductModule } from './product/product.module';
 import { OrdersModule } from './orders/orders.module';
 import { FashionModule } from './fashion/fashion.module';
+import { TodoComponent } from './todo/todo.component';
 
 
 
@@ -97,6 +98,7 @@ import { FashionModule } from './fashion/fashion.module';
     DemopostdetailsComponent,
     UserComponent,
     UserdetailsComponent,
+    TodoComponent,
   
 
    
@@ -142,4 +144,8 @@ import { FashionModule } from './fashion/fashion.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log('AppModule Called');
+  }
+}

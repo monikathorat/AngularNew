@@ -22,6 +22,7 @@ import { MobileComponent } from './product/mobile/mobile.component';
 import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
 import { RegistrationTemplateFormComponent } from './registration-template-form/registration-template-form.component';
+import { TodoComponent } from './todo/todo.component';
 import { UserComponent } from './user/user.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
@@ -64,7 +65,8 @@ children:[
 { path: 'fashionn', component: FashioncatComponent },
 { path: 'detailfashion/:id', component: DetailfashionComponent }, 
 { path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
-  { path: 'admin', loadChildren: './admin/admin.module#AdminModule'}, 
+  { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
+  {path:'todo',component:TodoComponent}, 
 { path: '**', component: PagenotfoundComponent}
 ];
 
