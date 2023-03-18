@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AuthGuard } from './auth.guard';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
@@ -14,6 +15,7 @@ import { FurnitureComponent } from './homesupplies/furniture/furniture.component
 import { HomesuppliesComponent } from './homesupplies/homesupplies.component';
 import { LightingsComponent } from './homesupplies/lightings/lightings.component';
 import { PaintingsComponent } from './homesupplies/paintings/paintings.component';
+import { LoginformComponent } from './loginform/loginform.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './product/camera/camera.component';
@@ -32,7 +34,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'aboutus', component: AboutusComponent }, // http://localhost:4200/aboutus
   { path: 'contactus', component: ContactusComponent },
-  { path: 'product', component:ProductComponent , 
+  { path: 'product', canActivate:[AuthGuard],  component:ProductComponent , 
 children:[  
   {path:'laptop', component:LaptopComponent},
   {path:'mobile', component:MobileComponent},
@@ -60,7 +62,8 @@ children:[
 {path:'user',component:UserComponent},
 {path:'userdetails',component:UserdetailsComponent},
 // {path:'userdetails/:id',component:UserdetailsComponent},
-{ path: 'login', component: RegistrationTemplateFormComponent},
+//{ path: 'login', component: RegistrationTemplateFormComponent},
+{ path: 'login', component: LoginformComponent},
 {path:'order', component:OrderlistComponent},  
 { path: 'fashionn', component: FashioncatComponent },
 { path: 'detailfashion/:id', component: DetailfashionComponent }, 
