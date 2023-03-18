@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class TodoService {
 
   apiUrl = "http://localhost:3000/todos";
+  //headers = new HttpHeaders().set('content-type','application/json');
 
   //DI 
   constructor(private httpClient: HttpClient) { }
@@ -21,6 +22,7 @@ export class TodoService {
   // read 
 
   list() {
+  // return this.httpClient.get(this.apiUrl,{headers:this.headers});
    return this.httpClient.get(this.apiUrl);
   }
 

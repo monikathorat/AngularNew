@@ -31,7 +31,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFromAssignComponent } from './reactive-from-assign/reactive-from-assign.component';
 import { RegistrationTemplateFormComponent } from './registration-template-form/registration-template-form.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PipeexampleComponent } from './pipeexample/pipeexample.component';
 import { CustomPipe } from './custom.pipe';
 import { SearchPipe } from './search.pipe';
@@ -61,6 +61,9 @@ import { ProductModule } from './product/product.module';
 import { OrdersModule } from './orders/orders.module';
 import { FashionModule } from './fashion/fashion.module';
 import { TodoComponent } from './todo/todo.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { MyserviceService } from './service/myservice.service';
+import { AuthInterceptorService } from './auth/auth-interceptor.service';
 
 
 
@@ -99,6 +102,7 @@ import { TodoComponent } from './todo/todo.component';
     UserComponent,
     UserdetailsComponent,
     TodoComponent,
+    LoginformComponent,
   
 
    
@@ -141,7 +145,11 @@ import { TodoComponent } from './todo/todo.component';
     
 
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true
+  }, MyserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

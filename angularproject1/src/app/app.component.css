@@ -1,14 +1,43 @@
 /* .example-card {
     max-width: 400px;
   } */
-  .content{
+  /* .content{
     display: inline-block;
-    margin-left: 350px;
+    margin-left: 150px;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 60px;
     background-color:floralwhite;
     color: black;
     font-weight: bolder;
-    width: 1000px; 
+    width: 1200px; 
     margin-right: 150px;   
-  }
+  } */
+
+  /* Style for the navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #eee;
+}
+
+/* Style for the navigation links */
+.nav-link {
+  padding: 10px;
+  color: blue;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* Style for the active link */
+.active {
+  background-color: blue;
+  color: white;
+}
+

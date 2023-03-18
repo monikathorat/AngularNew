@@ -1,33 +1,10 @@
-<!-- 
 
-<button class="btn btn-primary" (click)="createTodo()" >Create</button>
+
+
 
 <div class="container">
-    <table class="table">
-        <thead>
-         <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Actions</th>
-         </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let todo of todoList">
-                <td>{{todo.id}}</td>
-                <td>{{todo.title}}</td>
-                <td>
-                    <button type="button" class="btn btn-link" (click)="editTodo(todo)" >Edit</button>
-                    <button type="button" class="btn btn-link" (click)="deleteTodo(todo.id)" >Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div> -->
-
-
-<button class="btn btn-primary" (click)="createTodo()" >Create</button>
-<!-- <input type="text" id="title" [(ngModel)]="newTodoTitle"> -->
-<div class="container">
+    <button class="btn btn-primary" (click)="createTodo()" >Create</button><br>
+    <!-- <input type="text" id="title" [(ngModel)]="newTodoTitle"> --> 
     <table class="table">
         <thead>
             <tr>
@@ -38,13 +15,10 @@
         </thead>
         <tbody>
             <tr *ngFor="let todo of todoList">
-                <td>{{todo.id}}</td>
-            
+                <td>{{todo.id}}</td>            
                 <td ><input type="text" [(ngModel)]="todo.title"></td>
                 <td>
-                    <button type="button" class="btn btn-link" (click)="editTodo(todo)" >Edit</button>
-                   
-                    
+                    <button type="button" class="btn btn-link" (click)="editTodo(todo)" >Edit</button>                                
                     <button type="button" class="btn btn-link" (click)="deleteTodo(todo.id)">Delete</button>
                 </td>
             </tr>

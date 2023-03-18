@@ -9,7 +9,7 @@ import { FashionService } from 'src/app/service/fashion.service';
 })
 export class FashiondetailsComponent implements OnInit {
   product: any;
-
+  fashionItem: any;
   constructor(private route: ActivatedRoute,private fashion:FashionService) { }
 
   

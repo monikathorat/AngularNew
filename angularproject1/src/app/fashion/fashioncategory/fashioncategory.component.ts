@@ -8,15 +8,26 @@ import { FashionService } from 'src/app/service/fashion.service';
   styleUrls: ['./fashioncategory.component.css']
 })
 export class FashioncategoryComponent implements OnInit {
+  category: string = '';
+  products: any[] = [];
+
+  constructor(private Clothing:FashionService) { }
   fashionItems: any[];
-
-  constructor(private fashion:FashionService) { }
-
   ngOnInit() {
-    this.fashionItems = this.fashion.getFashionItems();
+    this.fashionItems = this.Clothing.getFashionItems();
+  }
 
+  filterByCategory(category: string): void {
+    this.category = category;
+    this.products = this.Clothing.getProductsByCategory(category);
+  }
+
+  clearFilter(): void {
+    
+    this.products = this.Clothing.getFashionItems();
   }
 }
+
 
 
 // categories: any[];
