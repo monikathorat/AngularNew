@@ -27,12 +27,15 @@ import { RegistrationTemplateFormComponent } from './registration-template-form/
 import { TodoComponent } from './todo/todo.component';
 import { UserComponent } from './user/user.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { WikiresultComponent } from './wikipedia-assign/wikiresult/wikiresult.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'}, // http:localhost:4200 
   { path: 'home', component: HomeComponent},
   { path: 'aboutus', component: AboutusComponent }, // http://localhost:4200/aboutus
+  { path: 'wikipedia', component: WikiresultComponent }, // http://localhost:4200/aboutus
+
   { path: 'contactus', component: ContactusComponent },
   { path: 'product', canActivate:[AuthGuard],  component:ProductComponent , 
 children:[  

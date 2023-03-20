@@ -64,6 +64,10 @@ import { TodoComponent } from './todo/todo.component';
 import { LoginformComponent } from './loginform/loginform.component';
 import { MyserviceService } from './service/myservice.service';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
+import { WikisearchComponent } from './wikipedia-assign/wikisearch/wikisearch.component';
+import { WikipageComponent } from './wikipedia-assign/wikipage/wikipage.component';
+import { WikiresultComponent } from './wikipedia-assign/wikiresult/wikiresult.component';
+import { WikiModule } from './wikipedia-assign/wiki.module';
 
 
 
@@ -103,6 +107,9 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
     UserdetailsComponent,
     TodoComponent,
     LoginformComponent,
+    WikisearchComponent,
+    WikipageComponent,
+    WikiresultComponent,
   
 
    
@@ -141,6 +148,7 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
     ProductModule,
     OrdersModule,
     FashionModule,
+    WikiModule
 
     
 
