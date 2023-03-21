@@ -68,6 +68,7 @@ import { WikisearchComponent } from './wikipedia-assign/wikisearch/wikisearch.co
 import { WikipageComponent } from './wikipedia-assign/wikipage/wikipage.component';
 import { WikiresultComponent } from './wikipedia-assign/wikiresult/wikiresult.component';
 import { WikiModule } from './wikipedia-assign/wiki.module';
+import { HooksComponent } from './hooks/hooks.component';
 
 
 
@@ -110,6 +111,7 @@ import { WikiModule } from './wikipedia-assign/wiki.module';
     WikisearchComponent,
     WikipageComponent,
     WikiresultComponent,
+    HooksComponent,
   
 
    

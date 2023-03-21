@@ -15,6 +15,7 @@ import { FurnitureComponent } from './homesupplies/furniture/furniture.component
 import { HomesuppliesComponent } from './homesupplies/homesupplies.component';
 import { LightingsComponent } from './homesupplies/lightings/lightings.component';
 import { PaintingsComponent } from './homesupplies/paintings/paintings.component';
+import { HooksComponent } from './hooks/hooks.component';
 import { LoginformComponent } from './loginform/loginform.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -69,6 +70,7 @@ children:[
 { path: 'login', component: LoginformComponent},
 {path:'order', component:OrderlistComponent},  
 { path: 'fashionn', component: FashioncatComponent },
+{ path: 'hook', component: HooksComponent },
 { path: 'detailfashion/:id', component: DetailfashionComponent }, 
 { path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
   { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
