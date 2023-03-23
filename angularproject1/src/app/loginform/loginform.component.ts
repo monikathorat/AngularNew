@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
+import { CanComponentLeave } from '../unsavedchanges.guard';
 
 
 @Component({
@@ -8,9 +9,10 @@ import { AuthService } from '../service/auth.service';
   templateUrl: './loginform.component.html',
   styleUrls: ['./loginform.component.css']
 })
-export class LoginformComponent implements OnInit {
+export class LoginformComponent implements OnInit,CanComponentLeave {
 
   msg;
+  
   // DI 
   constructor(private authService: AuthService, private route: Router) { }
 
@@ -24,6 +26,12 @@ export class LoginformComponent implements OnInit {
    } else {
     this.msg = 'Invalid user name or password'
    }
+  }
 
+  canLeave():  boolean{
+    if(this.authService.checkuser){
+      return window.confirm('You have some unsaved changes.Save it before leaving');
+    }
+    return true;
   }
 }

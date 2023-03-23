@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 import { DemoService } from './service/demo.service';
 import { MyserviceService } from './service/myservice.service';
 import { RapidapiService } from './service/rapidapi.service';
@@ -12,6 +14,8 @@ export class AppComponent {
   title = 'angularproject1';
   products={};
   data : string = 'red';
+  appchildExist:boolean = true;
+  myObservable:any;
 
   constructor(private rapidapiservice: RapidapiService,private myservice:MyserviceService,private demoService:DemoService){
 
@@ -22,7 +26,22 @@ export class AppComponent {
   handleData(value) {
     this.data = value.target.value;
   }
+
+  OnDestroy(){
+    this.appchildExist = false;
+  }
+
   ngOnInit(): void {
+
+
+    // this.myObservable = of('This is custom obs').pipe(delay(3000)).subscribe(res =>{
+    //   console.log('myObservable data',res);
+      
+    // })
+    this.myObservable = of('This is custom observable').pipe(delay(3000));
+
+    
+
     this.rapidapiservice.getFinance().subscribe(res=>{
       console.log('rapid res',res);      
     }); 

@@ -94,7 +94,13 @@
           <a routerLinkActive="active" routerLink="/fashionn" class="nav-link">fashion</a>
         </li>
         <li class="nav-item">
-          <a routerLinkActive="active" routerLink="/hook" class="nav-link">Hooks</a>
+          <!-- <a routerLinkActive="active" routerLink="/hook" class="nav-link">Hooks</a>
+        </li>
+        <li class="nav-item"> --> 
+          <a routerLinkActive="active" routerLink="/adduser" class="nav-link">AddUser</a>
+        </li>
+        <li class="nav-item">
+          <a routerLinkActive="active" routerLink="/userdetails" class="nav-link">User Details</a>
         </li>
         <li class="nav-item"> <a  routerLinkActive="active" routerLink="/customer" class="nav-link">Cutomer</a> </li>
         <li class="nav-item"> <a  routerLinkActive="active" routerLink="/admin" class="nav-link">Admin</a> </li>
@@ -104,14 +110,17 @@
   </header>
 </div>
 
-<app-hooks [parentData]="data">
+   
+    <!-- <app-hooks [parentData]="data" *ngIf = "appchildExist">
   <h1 #child>
     This is child content coming from parent
   </h1>
-</app-hooks>
+</app-hooks> -->
 <!-- <button class="btn btn-primary" (click)="changeFromParent()">Change From Parent</button> -->
-<input type="text" placeholder="Enter value" (blur)="handleData($event)">
+<!-- <input type="text" placeholder="Enter value" (blur)="handleData($event)">
 
+<button class="btn btn-danger" (click)="OnDestroy()">OnDestroy</button>
+{{myObservable | async}} -->
  
 
 <div class="container">

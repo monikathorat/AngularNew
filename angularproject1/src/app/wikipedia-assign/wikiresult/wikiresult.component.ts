@@ -11,7 +11,7 @@ export class WikiresultComponent implements OnInit {
   isLoading = false;
   constructor(private _wikipediaService: WikiService) {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
   pages = [];
   onTerm(space: string) {

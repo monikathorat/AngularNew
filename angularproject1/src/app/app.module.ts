@@ -69,6 +69,7 @@ import { WikipageComponent } from './wikipedia-assign/wikipage/wikipage.componen
 import { WikiresultComponent } from './wikipedia-assign/wikiresult/wikiresult.component';
 import { WikiModule } from './wikipedia-assign/wiki.module';
 import { HooksComponent } from './hooks/hooks.component';
+import { AdduserComponent } from './adduser/adduser.component';
 
 
 
@@ -112,6 +113,7 @@ import { HooksComponent } from './hooks/hooks.component';
     WikipageComponent,
     WikiresultComponent,
     HooksComponent,
+    AdduserComponent,
   
 
    

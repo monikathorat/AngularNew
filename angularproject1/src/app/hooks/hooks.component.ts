@@ -1,4 +1,5 @@
-import { AfterContentChecked, AfterContentInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { DemoService } from '../service/demo.service';
 
 
@@ -7,15 +8,24 @@ import { DemoService } from '../service/demo.service';
   templateUrl: './hooks.component.html',
   styleUrls: ['./hooks.component.css']
   })
-export class HooksComponent implements OnChanges, OnInit, DoCheck, AfterContentInit , AfterContentChecked{
+export class HooksComponent implements OnChanges, OnInit, DoCheck, AfterContentInit , AfterContentChecked,OnDestroy{
 
   @ContentChild("child", { static: false}) contentChild: ElementRef;
   @Input() parentData: string;
   @ViewChild("childhook",{static:false}) viewChild:ElementRef;
   
+  subscription:Subscription;
+  counter;
+  num:number=1;
  // @Input() 
   constructor(private demoService: DemoService) { 
     console.log('HooksComponent constructor called');
+  }
+  ngOnDestroy(): void {
+    console.log
+    ('HooksComponent ngOnDestroy called');
+    clearInterval(this.counter);
+    this.subscription.unsubscribe();
   }
 
   ngAfterContentChecked(): void {
@@ -47,10 +57,16 @@ export class HooksComponent implements OnChanges, OnInit, DoCheck, AfterContentI
   ngOnInit(): void {
    console.log('HooksComponent ngOnInit called');
  
-   this.demoService.getUsers().subscribe(res => {
+   this.subscription=this.demoService.getUsers().subscribe(res => {
     console.log('users from hooks component', res);
    })
+  //  this.counter=setInterval(()=>{
+  //   this.num = this.num +1;
+  //   console.log(this.num);
+    
+  //  },1000)
   }
+  
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log( 'HooksComponent ngOnChanges called', changes);
