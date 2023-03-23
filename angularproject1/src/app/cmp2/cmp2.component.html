@@ -1,0 +1,25 @@
+<!-- <div class="col-md-6 text-left rounded  py-5">
+    <form class="form">
+        <input class="from-control" type="text" placeholder="update your  name" #udetail>
+    
+        Name: <strong>{{data}}</strong>   <br> <br>
+        <input class="from-control" type="text" placeholder="update your  contact" #udetail>
+        Contact: <strong>{{data}}</strong> 
+        <button class="btn btn-primary mt-2" (click)="updateDetails(udetail)" >Update</button>
+    </form>   
+</div> -->
+
+
+<form>
+  <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Name</label>
+      <input type="text" class="form-control" placeholder="Enter Name" value="{{employee.name}}"  #ename>
+      <!-- <p>Name: <strong>{{data}}</strong></p> -->
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlContact" class="form-label">Contact</label>
+      <input type="tel" class="form-control" placeholder="Enter Contact" value="{{employee.contact}}" #econtact>
+      <!-- <p>Contact: <strong>{{data}}</strong></p> -->
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="updateEmpDetails(ename,econtact) ">Submit</button>
+  </form> 

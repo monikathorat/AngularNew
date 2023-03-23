@@ -1,0 +1,28 @@
+
+<!-- <p>Login</p>
+
+<input type="text" #username placeholder="Enter user name"> <br>
+<input type="text" #password placeholder="Entr password"> 
+
+<button class="btn btn-primary" (click)="login(username.value, password.value)">Login </button> <br>
+
+<br>
+
+<span>{{msg}}</span> -->
+
+
+<form>
+    <p>Login</p>
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control" #username placeholder="Enter username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" #password placeholder="Enter password">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="login(username.value, password.value)">Login</button>
+    <br>
+    <span>{{msg}}</span>
+</form>
+

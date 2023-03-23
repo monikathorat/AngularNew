@@ -1,0 +1,47 @@
+/* .card{
+    display: inline-block;
+    width: 700px;
+    height: 550px;
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 10px;
+} */
+
+/* Style for the create button */
+.btn-primary {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  /* Style for the table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for the edit and delete buttons */
+  .btn-link {
+    color: blue;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
