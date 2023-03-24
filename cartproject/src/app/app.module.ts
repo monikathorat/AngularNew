@@ -7,7 +7,7 @@ import { CartloginComponent } from './cartlogin/cartlogin.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarthomeComponent } from './carthome/carthome.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CartsignupComponent } from './cartsignup/cartsignup.component';
+import { CartsignComponent } from './cartsign/cartsign.component';
 //import { CartproductsComponent } from './cartproducts/cartproducts.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { CartsignupComponent } from './cartsignup/cartsignup.component';
     AppComponent,
     CartloginComponent,
     CarthomeComponent,
-    CartsignupComponent,
+    CartsignComponent,
     //CartproductsComponent,
       
   ],
