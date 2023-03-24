@@ -26,6 +26,7 @@ import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
 import { RegistrationTemplateFormComponent } from './registration-template-form/registration-template-form.component';
 import { ResolveGuard } from './resolve.guard';
+import { RxjsComponent } from './rxjs/rxjs.component';
 import { TodoComponent } from './todo/todo.component';
 import { UnsavedchangesGuard } from './unsavedchanges.guard';
 import { UserComponent } from './user/user.component';
@@ -74,7 +75,9 @@ children:[
 //{ path: 'login', component: RegistrationTemplateFormComponent},
 //{ path: 'login', component: LoginformComponent},
 { path: 'login', component: LoginformComponent,canDeactivate: [UnsavedchangesGuard]},
-{path:'order', component:OrderlistComponent},  
+{path:'order', component:OrderlistComponent}, 
+{path:'rxjs', component:RxjsComponent}, 
+
 { path: 'fashionn', component: FashioncatComponent },
 { path: 'adduser', component: AdduserComponent, canDeactivate: [UnsavedchangesGuard]},
 //{ path: 'adduser', component: AdduserComponent},

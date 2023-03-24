@@ -70,6 +70,7 @@ import { WikiresultComponent } from './wikipedia-assign/wikiresult/wikiresult.co
 import { WikiModule } from './wikipedia-assign/wiki.module';
 import { HooksComponent } from './hooks/hooks.component';
 import { AdduserComponent } from './adduser/adduser.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 
@@ -114,6 +115,7 @@ import { AdduserComponent } from './adduser/adduser.component';
     WikiresultComponent,
     HooksComponent,
     AdduserComponent,
+    RxjsComponent,
   
 
    
