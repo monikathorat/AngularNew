@@ -1,0 +1,29 @@
+
+
+  /* Style for the navigation bar */
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #eee;
+  }
+  
+  /* Style for the navigation links */
+  .nav-link {
+    padding: 10px;
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    background-color: blue;
+    color: white;
+  }
+  
+  /* Style for the active link */
+  .active {
+    background-color: blue;
+    color: white;
+  }
