@@ -1,0 +1,265 @@
+/* 
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .search input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  .search button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .pagination {
+    margin-bottom: 20px;
+  }
+
+  .pagination li {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .pagination li a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .pagination li a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-img-top {
+    width: 90%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .gif{
+    width: 1000px;
+    margin: 0;
+    display: grid;    
+    grid-template-columns: auto auto auto auto;
+
+  } */
+  
+
+  /* .gifs {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+  } */
+  
+  
+  
+
+
+
+/* 
+  .container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .search input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .search button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .search button:hover {
+    background-color: #3e8e41;
+  }
+
+  .pagination {
+    margin-top: 20px;
+  }
+
+  .pagination .page-link {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .pagination .page-link:hover {
+    background-color: #f2f2f2;
+  }
+
+  .pagination .page-link:focus {
+    box-shadow: none;
+  }
+
+  .pagination .page-item.active .page-link {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+  }
+
+  .pagination .page-item.disabled .page-link {
+    color: #999;
+    background-color: #fff;
+    border-color: #ddd;
+    cursor: not-allowed;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+  } */
+
+
+
+  .gifs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .gifs img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  input[type="text"] {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 250px;
+  }
+  
+  button[type="submit"] {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0066ff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0052cc;
+  }
+  
+  
+  
+  
+  /* button {
+    padding: 10px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #d32f2f;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-bottom: 2px solid #f44336;
+  }
+  
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+  } */
+  
+  

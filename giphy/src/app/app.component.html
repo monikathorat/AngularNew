@@ -1,0 +1,101 @@
+<!-- <div class="search">
+  <input type="text" [(ngModel)]="query" placeholder="Search GIFs">
+  <button (click)="search()">Search</button>
+</div>
+
+<div class="gifs">
+  <div *ngFor="let gif of gifs">
+    <img src="{{ gif.images.fixed_width.url }}" alt="{{ gif.title }}">
+  </div>
+</div>
+
+<div class="pagination" *ngIf="totalGifs !== undefined">
+  <button (click)="prevPage()" [disabled]="currentPage <= 1">Prev</button>
+  <span>Page {{ currentPage }} of {{ Math.ceil(totalGifs / pageSize) }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage >= Math.ceil(totalGifs / pageSize)">Next</button>
+</div> -->
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="search">
+        <input type="text" [(ngModel)]="query" placeholder="Search GIFs">
+        <button (click)="search()">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" (click)="prevPage()" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">{{currentPage}}</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" (click)="nextPage()" aria-label="Next">
+              
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="gif">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let gif of gifs">
+      <div class="card">
+        <img [src]="gif.images.fixed_width.url" [alt]="gif.title" >
+        <div class="card-body">
+          <h5 class="card-title">{{gif.title}}</h5>
+          <p class="card-text">{{gif.username}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<div>
+  <h1>GIFs</h1>
+  <form (submit)="searchGifs()">
+    <input type="text" [(ngModel)]="query" placeholder="Search GIFs..." name="search" 
+  [ngModelOptions]="{standalone: true}">
+
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<div  class="gifs" *ngIf="gifs.length">
+  <div *ngFor="let gif of gifs">
+    <img [src]="gif.images.original.url" [alt]="gif.title">
+  </div>
+  
+</div>
+<button (click)="loadMore()">Load More</button>
+
+<div *ngIf="!gifs.length && query">
+  <p>No results found for "{{ query }}"</p>
+</div>
+
+<div *ngIf="!gifs.length && !query">
+  <p>Loading...</p>
+</div>
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
