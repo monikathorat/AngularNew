@@ -1,0 +1,70 @@
+<header class="bg-light">
+  <div class="container-fluid">
+    <div class="row justify-content-between align-items-center py-3">
+      <div class="col-auto">
+        <div class="card">
+          <div class="card-body">
+            <b><i style="color: orangered; font-size: larger;">/// realFunnel</i></b>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-outline-secondary" type="button">
+          <i class="bi bi-person"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="vertical-menu">
+  <a href="#" class="active">
+    <i class="bi bi-house-door"></i>
+    OVERVIEW
+  </a>
+  <a routerLink="/funnel">
+    <i class="bi bi-filter-square"></i>
+    FUNNEL
+  </a>
+  <a href="#">
+    <i class="bi bi-people"></i>
+    MERCHANTS
+  </a>
+  <a href="#">
+    <i class="bi bi-file-bar-graph"></i>
+    REPORTS
+  </a>
+  <a href="#">
+    <i class="bi bi-megaphone"></i>
+    CAMPAIGN
+  </a>
+  <a href="#">
+    <i class="bi bi-calculator"></i>
+    CALCULATORS
+  </a>
+</div>
+
+
+<app-content></app-content>
+
+
+
+
+<router-outlet></router-outlet>
